@@ -1,11 +1,16 @@
-package hello;
+package gov.kiron.server.la.data;
 
-public class Greeting {
+/**
+ * Created on 30.04.2016. Documentation TODO!
+ *
+ * @author <a href="mailto:christian.plewnia@rwth-aachen.de">Christian Plewnia</a>
+ */
+public class Answer {
 
     private final long id;
     private final String content;
 
-    public Greeting(long id, String content) {
+    public Answer(long id, String content) {
         this.id = id;
         this.content = content;
     }
