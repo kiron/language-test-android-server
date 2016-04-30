@@ -26,7 +26,7 @@ public class TestController {
             connection = DriverManager.getConnection(
                     "jdbc:postgresql://athen052.server4you.de:5432/db-v1","hackathon", "hack4kiron");
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT * FROM questions;");
+            ResultSet rs = statement.executeQuery("SELECT * FROM questions ORDER BY id;");
             while (rs.next()) {
                 String content = rs.getString("text");
                 List<Answer> answers = new ArrayList<>();
@@ -34,7 +34,7 @@ public class TestController {
                 answers.add(new Answer(111, rs.getString("answer2_text")));
                 answers.add(new Answer(111, rs.getString("answer3_text")));
                 answers.add(new Answer(111, rs.getString("answer4_text")));
-                questions.add(new Question(rs.getInt("id"), content, answers));
+                questions.add(new Question(rs.getInt("id"), content, rs.getString("pictureurl"), answers));
             }
             connection.close();
         } catch (SQLException e) {
@@ -66,8 +66,8 @@ public class TestController {
 
                 statement.execute("INSERT INTO testresults(username, questionId, answer) VALUES ('" +
                         username + "', " +
-                        questionId + ", " +
-                        answerLetter + ")");
+                        questionId + ", '" +
+                        answerLetter + "')");
             }
 
             connection.close();

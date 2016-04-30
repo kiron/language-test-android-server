@@ -11,11 +11,13 @@ public class Question {
 
     private final long id;
     private final String content;
+    private final String pictureURL;
     private final List<Answer> answers;
 
-    public Question(long id, String content, List<Answer> answers) {
+    public Question(long id, String content, String pictureURL, List<Answer> answers) {
         this.id = id;
         this.content = content;
+        this.pictureURL = pictureURL;
         this.answers = answers;
     }
 
@@ -25,6 +27,10 @@ public class Question {
 
     public String getContent() {
         return content;
+    }
+
+    public String getPictureURL() {
+        return pictureURL;
     }
 
     public List<Answer> getAnswers() {
