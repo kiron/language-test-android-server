@@ -2,20 +2,14 @@
 
 ## Build 
 
-### Maven
+* In the project's root directory run Maven `mvn package`
+* The build will produce a java archive `language-assessment-server-X.Y.Z.jar` in the `target` directory
 
-* In the project's root directory run `mvn package`
-* The build will produce a java archive `gs-rest-service-0.1.0.jar` in the `target` directory
-
-### Gradle
-
-Todo
-
-##Deployment
+## Deployment
 
 * Run PostgreSQL database server first (and ensure the schema is set up, see `postgres-schema.sql` for schema creation)
 * Fill the database with questions
-* Start the server application by running the java archive with `java -jar gs-rest-service-0.1.0.jar`
+* Start the server application by running the java archive with `java -jar language-assessment-server-X.Y.Z.jar`
 
 ## Notes
 
