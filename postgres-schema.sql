@@ -18,7 +18,7 @@ CREATE TABLE hackathon.questions
   text character varying,
   pictureurl character varying,
   CONSTRAINT questions_pkey PRIMARY KEY (id)
-)
+);
 
 -- Table: hackathon.testresults
 
