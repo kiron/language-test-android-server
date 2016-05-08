@@ -1,20 +1,20 @@
-# Language Assessment Test Server
+## Kiron Language Assessment Test Server
 
-## Build 
+### Build 
 
-* In the project's root directory run Maven `mvn package` (or run Maven via your IDE) 
-* The build will produce a java archive `language-assessment-server-X.Y.Z.jar` in the `target` directory
+1. In the project's root directory run Maven `mvn package` (or run Maven via your IDE) 
+2. The build will produce a java archive `language-assessment-server-X.Y.Z.jar` in the `target` directory
 
-## Deployment
+### Deployment
 
-* Run PostgreSQL database server first (and ensure the schema is set up, see `postgres-schema.sql` for schema creation)
-* Fill the database with questions
-* Start the server application by running the java archive with `java -jar language-assessment-server-X.Y.Z.jar`
-* The server will now listen on port 8080
+1. Run PostgreSQL database server first (and ensure the schema is set up, see `postgres-schema.sql` for schema creation)
+2. Fill the database with questions
+3. Start the server application by running the java archive with `java -jar language-assessment-server-X.Y.Z.jar`
+4. The server will now listen on port 8080
 
-## REST Queries
+### REST Queries
 
-### Retrieving Questions
+#### Retrieving Questions
 
 All questions for a language assessment test can be retrieved with a single request:
 
@@ -22,7 +22,7 @@ All questions for a language assessment test can be retrieved with a single requ
 
 The answer will provide a JSON structure with the questions (ids, question text, question image url, and answers).
 
-### Submitting Answers
+#### Submitting Answers
 
 The following request allows for the submission of the answers of the language assessment test:
 
@@ -41,7 +41,7 @@ where
 
 `/submit/12:A,13:B:16:D?username=John`
 
-## Notes
+### Notes
 
 * The implementation of the REST server is based on the [Spring framework](https://spring.io/)'s tutorial for a [REST server](https://spring.io/guides/gs/rest-service/)
 * Currently, the database connection is hard-coded and points to a server that is no longer available
