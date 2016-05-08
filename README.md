@@ -2,7 +2,7 @@
 
 ## Build 
 
-* In the project's root directory run Maven `mvn package`
+* In the project's root directory run Maven `mvn package` (or run Maven via your IDE) 
 * The build will produce a java archive `language-assessment-server-X.Y.Z.jar` in the `target` directory
 
 ## Deployment
