@@ -10,6 +10,7 @@
 * Run PostgreSQL database server first (and ensure the schema is set up, see `postgres-schema.sql` for schema creation)
 * Fill the database with questions
 * Start the server application by running the java archive with `java -jar language-assessment-server-X.Y.Z.jar`
+* The server will now listen on port 8080
 
 ## Notes
 
